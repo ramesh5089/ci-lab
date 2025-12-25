@@ -6,10 +6,10 @@ on:
 jobs:
   build:
     run-on: ubuntu-latest
-      steps:
-        - name: Checkout code
-          uses: actions/checkout@v4
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-        - name: Run echo command
-          run: echo "CI Pipeline Executed Successfully"
+      - name: Run echo command
+        run: echo "CI Pipeline Executed Successfully"
 
