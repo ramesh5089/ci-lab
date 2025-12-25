@@ -13,3 +13,5 @@ jobs:
       - name: Run echo command
         run: echo "CI Pipeline Executed Successfully"
 
+      - name: Run health check
+        run: ./scripts/health.sh
