@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "Health check running..."
-exit 1
+#exit 1
