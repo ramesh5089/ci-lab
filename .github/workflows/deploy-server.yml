@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-deploy:
+  deploy:
     needs: build
     runs-on: ubuntu-latest
 
