@@ -13,7 +13,7 @@ jobs:
       - name: Deploy to server
         uses: appleboy/ssh-action@v1
         with:
-          host: ${{ secrets.192.168.29.100 }}
+          host: ${{ secrets.SERVER_IP }}
           username: medicrx
           key: ${{ secrets.SSH_KEY }}
           script: |
