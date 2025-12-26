@@ -1,0 +1,16 @@
+deploy:
+  needs: build
+  runs-on: ubuntu-latest
+
+  steps:
+    - name: Deploy to server
+      uses: appleboy/ssh-action@v1
+      with:
+        host: ${{ secrets.SERVER_IP }}
+        username: medicrx
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+          docker pull username/ci-nginx:v11
+          docker stop web || true
+          docker rm web || true
+          docker run -d --name web -p 8085:80 username/ci-nginx:v11
