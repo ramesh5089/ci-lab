@@ -15,5 +15,9 @@ jobs:
 
       - name: Run health check
         run: ./scripts/health.sh
+
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v3
+
       - name: Build a Docker image
         run: docker build -t my-nginx:${{ github.sha }} .
